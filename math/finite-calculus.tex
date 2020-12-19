@@ -1,0 +1,53 @@
+Recall the intro part of integral
+in Calculus' class.
+If you were the same as me,
+you mignt have faced a concept naming {\it Rieman sum}.
+We expanded finite Rieman sums to infinite,
+then the integrals began.
+Here we go in the opposite direction, 
+try to find out the counterpart of differentials in summation.
+
+To make a presentation, 
+let $y=f(x)$, then:
+$$
+dy = f'(x)\,dx\eqno(1)
+$$
+
+And attempt to find the corresponding in a sum $S_n = \sum_{k=1}^na_k$,
+like $x$ in $f'(x)$, 
+we need to specify the index $k$,
+then, the answer is clear:
+$$
+\eqalign{
+\Delta S_k &= S_{k+1} - S_k \cr
+&= a_{k+1}\cr
+}\eqno(2)
+$$
+Denoted by $\Delta$.
+
+This is the critical point, 
+and the reason why I write this essay
+despite the outstanding material
+provided already by Knuth's {\it Concrete Mathematics}.
+Let me point it out more precisely, 
+why dose $\Delta S_k$ equal to $a_{k+1}$, not $a_k$?
+
+If we considered the $\Delta S_k$ simply as
+the elements to be summed up, 
+because of the definition of $S_n$,
+it was naturally equated to $a_k$.
+But, the meaning behind $\Delta$ is increment,
+and the $k$th increment is much better
+to be considered as
+the next increment put on $k$th $S_n$(namely $S_k$),
+computed by $S_{k+1} - S_k$, 
+what we have seen before at $(2)$.
+
+There's a innate difference between differentials and 
+the terms included in a summation, 
+one need a base, and one needn't. 
+
+I was confused for a long time about the indexes 
+when trying to understand {\it Finite Calculus}, 
+this essay is wrote as a reminder for myself.
+
