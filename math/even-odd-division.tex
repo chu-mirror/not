@@ -1,0 +1,47 @@
+An analysis of a function's division to two parts,
+an even part and an odd part.
+$$
+\eqalign{
+f(x) &= g(x) + h(x)\cr
+g(-x) &= g(x)\cr
+h(-x) &= -h(x)\cr
+}
+$$
+
+Apparently, the question can be solved with linear algebra
+if I can construct an equation:
+$$
+\left[\matrix{
+1 & 1 \cr
+\bigcirc & \bigcirc }\right]
+\cdot
+\left[\matrix{
+g(x)\cr
+h(x)}\right]
+=
+\left[\matrix{
+f(x)\cr
+\bigcirc}\right]
+\eqno(1)
+$$
+The $\bigcirc$ should be replaced with something else,
+and it's simple if we noticed:
+$$
+f(-x) = g(-x) + h(-x) = g(x) - h(x)\eqno(2)
+$$
+Then, we have:
+$$
+\left[\matrix{
+1 & 1\cr
+1 & -1}\right]
+\cdot
+\left[\matrix{
+g(x)\cr
+h(x)}\right]
+=
+\left[\matrix{
+f(x)\cr
+f(-x)}\right]
+\eqno(3)
+$$
+
