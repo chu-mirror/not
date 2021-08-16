@@ -1,0 +1,109 @@
+\font\eightrm=cmr8
+{\eightrm The proof is excerpted from [1], I retyped it just for completeness
+of this note.}
+
+Slice the figure into a number of strips and obtain two
+approximations to the region, one from below and one from
+above, by using two sets of rectangles.
+For the sake of simplicity, we subdivide the base into $n$ equal parts,
+each of length $b/n$.  The points of subdivision correspond to the
+following values of x: $$
+0, {b\over n}, {2b\over n}, {3b\over n},\cdots, {(n-1)b\over n}, {nb\over n} = b.
+$$
+A typical point of subdivision corresponds to $x=kb/n$, where $k$ takes
+the successive values $k=0,1,2,\ldots,n$. At each point $kb/n$ we construct
+the outer rectangle of altitude $(kb/n)^2$. The area of this rectangle is the
+product of its base and altitude and is equal to $$
+\left({b\over n}\right)\left({kb\over n}\right)
+={b^3\over n^3}k^2.
+$$
+Let us denote by $S_n$ the sum of the areas of all the outer rectangles.
+Then since the the $k$th rectangle has area $(b^3/n^3)k^2$, we obtain the formula: $$
+S_n={b^3\over n^3}(1^2+2^2+3^2+\cdots+n^2). \eqno(1)
+$$
+In the same way we obtain a formula for the sum $s_n$ of all the inner rectangles: $$
+s_n={b^3\over n^3}(0^2+1^2+2^2+\cdots+(n-1)^2). \eqno(2)
+$$
+Before we go ahead, a formula should be taken out: $$
+1^2+2^2+3^2+\cdots+n^2={n^3\over 3}+{n^2\over 2} + {n\over 6}. \eqno(3)
+$$
+This identity is valid for every integer $n\ge 1$ and can be proved as follows:
+Start with the formula $(k+1)^3=k^3+3k^2+3k+1$ and rewrite it in the form: $$
+3k^2+3k+1=(k+1)^3-k^3.
+$$
+Taking $k=1,2,\ldots,n-1$, we get $n-1$ formulas: $$
+\eqalign{
+3\cdot1^2+3\cdot1+1&=2^3-1^3\cr
+3\cdot2^2+3\cdot2+1&=3^3-2^3\cr
+\cdots\cr
+3(n-1)^2+3(n-1)+1&=n^3-(n-1)^3.\cr
+}
+$$
+When we add these formulas, all the terms on the right cancel except two and we obtain $$
+3\bigl(1^2+2^2+\cdots+(n-1)^2\bigr)+
+3\bigl(1+2+\cdots+(n-1)\bigr)+\bigl(n-1\bigr)=n^3-1^3.
+$$
+The second sum on the left is the sum of terms in an arithmetic progression and it
+simplifies to ${1\over2}n(n-1)$.  Therefore this last equation gives us: $$
+1^2+2^2+\cdots+(n-1)^2={n^3\over3}-{n^2\over2}+{n\over6}. \eqno(4)
+$$
+Adding $n^2$ to both members, we obtain (3).
+
+For our purposes, we do not need the exact expressions given in the right-hand members
+of (3) and (4).  All we need are the two inequalities: $$
+1^2+2^2+\cdots+(n-1)^2<{n^3\over 3}<1^2+2^2+\cdots+n^2 \eqno(5)
+$$
+which are valid for every integer $n\ge 1$. These inequalities can be deduced easily as
+consequences of (3) and (4), or they can be proved directly by induction.
+
+If we multiply both inequalities in (5) by $b^3/n^3$ and make use of (1) and (2), we obtain $$
+s_n<{b^3\over 3}<S_n \eqno(6)
+$$
+for every n. The inequalities in (6) tell us that $b^3/3$ is a number which lies between $s_n$
+and $S_n$ for every $n$.  We will now prove that $b^3/3$ is the only number which has
+this property.  In other words, we assert that if $A$ is any number which satisfies the
+inequalities $$
+s_n<A<S_n \eqno(7)
+$$
+for every positive integer $n$, then $A=b^3/3$.
+
+To prove that $A=b^3/3$, we use the inequalities in (5) once more.  Adding $n^2$ to both
+sides of the leftmost inequality in (5), we obtain $$
+1^2+2^2+\cdots+n^2<{n^3\over3}+n^2.
+$$
+Multiplying this by $b^3/n^3$ and using (1), we find $$
+S_n<{b^3\over 3} + {b^3\over n}. \eqno(8)
+$$
+Similarly, by substracting $n^2$ from both sides of the rightmost inequality in (5)
+and multiplying by $b^3/n^3$, we are led to the inequality $$
+{b^3\over 3}-{b^3\over n} < s_n. \eqno(9)
+$$
+Therefore, any number $A$ satisfying (7) must also satisfy $$
+{b^3\over 3}-{b^3\over n} < A < {b^3\over 3} + {b^3\over n} \eqno(10)
+$$
+for every integer $n\ge 1$.  Now there are only three possibilities: $$
+A>{b^3\over 3}, A<{b^3\over 3}, A={b^3\over 3}.
+$$
+If we show that each of the first two leads to a contradiction, then we
+must have $A={b^3\over 3}$, since this exhausts all the possibilities.
+
+Suppose the inequality $A>{b^3\over3}$ were true.  From the second inequality in (10)
+we obtain $$
+A-{b^3\over 3} < {b^3\over n} \eqno(11)
+$$
+for every integer $n\ge 1$.  Since $A-{b^3\over 3}$ is positive, we may divide both sides of (11)
+by $A-{b^3\over 3}$ and multiply by $n$ to obtain the equivalent statement $$
+n < {b^3\over A-b^3/3}
+$$
+for every $n$.  But this inequality is obviously false when $n\ge b^3/(A-b^3/3)$.
+Hence the inequality $A>b^3/3$ leads to a contradiction.  By a similar argument,
+we can show that the inequality $A<b^3/3$ also leads to a contradiction, and therefore
+we must have $A=b^3/3$, as asserted.
+
+{\eightrm The following is my thoughts.}
+
+Proofs, even tell a same thing, have different qualities.  The proof showed above
+is well-formed in my opinion for it decoupled $1^2+2^2+\cdots+n^2$ from $b^3/n^3$ but
+do not do so for $b^3$ and $n^3$.
+\end
+
